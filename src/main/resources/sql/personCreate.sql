@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS person
 
 CREATE TABLE IF NOT EXISTS keeper
 (
-    keeper_id  serial,
-    course_id  integer   NOT NULL,
-    person_id  integer   NOT NULL,
+    keeper_id  bigserial,
+    course_id  bigint    NOT NULL,
+    person_id  bigint    NOT NULL,
     start_date timestamp NOT NULL,
     FOREIGN KEY (person_id) REFERENCES person (person_id) ON DELETE CASCADE,
     PRIMARY KEY (keeper_id)
@@ -21,17 +21,17 @@ CREATE TABLE IF NOT EXISTS keeper
 
 CREATE TABLE IF NOT EXISTS explorer_group
 (
-    group_id  serial,
-    course_id integer NOT NULL,
-    keeper_id integer NOT NULL,
+    group_id  bigserial,
+    course_id bigint NOT NULL,
+    keeper_id bigint NOT NULL,
     FOREIGN KEY (keeper_id) REFERENCES keeper (keeper_id) ON DELETE CASCADE,
     PRIMARY KEY (group_id)
 );
 CREATE TABLE IF NOT EXISTS explorer
 (
-    explorer_id serial,
-    person_id   integer   NOT NULL,
-    group_id    integer   NOT NULL,
+    explorer_id bigserial,
+    person_id   bigint    NOT NULL,
+    group_id    bigint    NOT NULL,
     start_date  timestamp NOT NULL,
     FOREIGN KEY (person_id) REFERENCES person (person_id) ON DELETE CASCADE,
     FOREIGN KEY (group_id) REFERENCES explorer_group (group_id) ON DELETE CASCADE,
