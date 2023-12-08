@@ -1,17 +1,10 @@
-CREATE TABLE IF NOT EXISTS homework_status
-(
-    status_id bigserial                     NOT NULL,
-    status    character varying(255) UNIQUE NOT NULL,
-    PRIMARY KEY (status_id)
-);
 CREATE TABLE IF NOT EXISTS homework
 (
     homework_id     bigserial,
-    course_theme_id bigint NOT NULL,
-    content         text   NOT NULL,
-    group_id        bigint NOT NULL,
-    status_id       bigint NOT NULL,
-    FOREIGN KEY (status_id) REFERENCES homework_status (status_id) ON DELETE CASCADE,
+    course_theme_id bigint                        NOT NULL,
+    title           character varying(255) UNIQUE NOT NULL,
+    content         text                          NOT NULL,
+    group_id        bigint                        NOT NULL,
     PRIMARY KEY (homework_id)
 );
 CREATE TABLE IF NOT EXISTS homework_request_status
