@@ -9,37 +9,37 @@ string string string string string string string string string string string str
 string string string string string string string string string.
 string string string string string string string string string string string string string string string string string string string string string string string string string string string string string string string string.');
 
-INSERT INTO orbit(orbit_level, system_count, galaxy_id)
-VALUES (1, 20, 1),
-       (2, 20, 1),
-       (3, 20, 1),
-       (4, 20, 1);
+INSERT INTO orbit(orbit_level, galaxy_id)
+VALUES (1, 1),
+       (2, 1),
+       (3, 1),
+       (4, 1);
 
-INSERT INTO star_system(system_level, system_name, orbit_id, system_position)
-VALUES ('1', 'Groovy', 1, 125),
-       ('1', 'JS', 1, 30),
-       ('1', 'Perfomance', 1, 60),
-       ('1', 'Scala', 1, 90),
-       ('1', 'Docker', 1, 135),
-       ('1', 'API', 1, 190),
-       ('1', 'Java', 1, 225),
-       ('1', 'Locators', 1, 300),
-       ('1', 'Git', 1, 270),
-       ('1', 'SQL', 1, 330),
-       ('2', 'Jenkins', 2, 135),
-       ('2', 'Mock', 2, 150),
-       ('2', 'MQ', 2, 180),
-       ('2', 'Maven', 2, 240),
-       ('3', 'K6', 3, 30),
-       ('3', 'Gatling', 3, 60),
-       ('3', 'API Automation', 3, 210),
-       ('3', 'UI Automation', 3, 270),
-       ('4', 'Reporting Load Testing', 4, 85),
-       ('4', 'Pipeline', 4, 45),
-       ('4', 'Async MKS', 4, 150),
-       ('4', 'JDBI', 4, 340),
-       ('4', 'Autotest project', 4, 285),
-       ('4', 'Reporting UI/API Test', 4, 210);
+INSERT INTO star_system(system_name, orbit_id, system_position)
+VALUES ('Groovy', 1, 125),
+       ('JS', 1, 30),
+       ('Perfomance', 1, 60),
+       ('Scala', 1, 90),
+       ('Docker', 1, 135),
+       ('API', 1, 190),
+       ('Java', 1, 225),
+       ('Locators', 1, 300),
+       ('Git', 1, 270),
+       ('SQL', 1, 330),
+       ('Jenkins', 2, 135),
+       ('Mock', 2, 150),
+       ('MQ', 2, 180),
+       ('Maven', 2, 240),
+       ('K6', 3, 30),
+       ('Gatling', 3, 60),
+       ('API Automation', 3, 210),
+       ('UI Automation', 3, 270),
+       ('Reporting Load Testing', 4, 85),
+       ('Pipeline', 4, 45),
+       ('Async MKS', 4, 150),
+       ('JDBI', 4, 340),
+       ('Autotest project', 4, 285),
+       ('Reporting UI/API Test', 4, 210);
 
 INSERT INTO system_dependency(child_id, parent_id, is_alternative)
 VALUES (1, null, false),
