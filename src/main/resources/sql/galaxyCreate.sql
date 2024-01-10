@@ -7,9 +7,9 @@ CREATE TABLE IF NOT EXISTS galaxy
 );
 CREATE TABLE IF NOT EXISTS orbit
 (
-    orbit_id     bigserial,
-    orbit_level  integer NOT NULL,
-    galaxy_id    bigint  NOT NULL,
+    orbit_id    bigserial,
+    orbit_level integer NOT NULL,
+    galaxy_id   bigint  NOT NULL,
     FOREIGN KEY (galaxy_id) REFERENCES galaxy (galaxy_id) ON DELETE CASCADE,
     PRIMARY KEY (orbit_id)
 );
@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS system_dependency
 (
     dependency_id  bigserial,
     is_alternative boolean NOT NULL,
-    child_id       integer,
-    parent_id      integer,
+    child_id       bigint,
+    parent_id      bigint,
     FOREIGN KEY (parent_id) REFERENCES star_system (system_id) ON DELETE CASCADE,
     FOREIGN KEY (child_id) REFERENCES star_system (system_id) ON DELETE CASCADE,
     PRIMARY KEY (dependency_id)

@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS person
 (
-    person_id         integer,
+    person_id         bigint,
     first_name        character varying(255) NOT NULL,
     last_name         character varying(255) NOT NULL,
     patronymic        character varying(255) NULL,
