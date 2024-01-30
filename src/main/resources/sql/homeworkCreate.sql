@@ -45,8 +45,7 @@ CREATE TABLE IF NOT EXISTS homework_request_feedback
 CREATE TABLE IF NOT EXISTS homework_mark
 (
     request_id bigint,
-    mark       integer NOT NULL,
-    comment    text    NULL,
+    comment    text NULL,
     FOREIGN KEY (request_id) REFERENCES homework_request (request_id) ON DELETE CASCADE,
     PRIMARY KEY (request_id)
 );
