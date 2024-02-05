@@ -1,11 +1,16 @@
 CREATE TABLE IF NOT EXISTS person
 (
-    person_id         bigint,
-    first_name        character varying(255) NOT NULL,
-    last_name         character varying(255) NOT NULL,
-    patronymic        character varying(255) NULL,
-    registration_date timestamp              NOT NULL,
-    max_explorers     integer                NOT NULL,
+    person_id               bigint,
+    first_name              character varying(255) NOT NULL,
+    last_name               character varying(255) NOT NULL,
+    patronymic              character varying(255) NULL,
+    registration_date       timestamp              NOT NULL,
+    max_explorers           integer                NOT NULL,
+    email                   character varying(255),
+    phone_number            character varying(255),
+    skype                   character varying(255),
+    telegram                character varying(255),
+    is_visible_private_data boolean                NOT NULL,
     PRIMARY KEY (person_id)
 );
 
